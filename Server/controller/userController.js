@@ -31,8 +31,8 @@ module.exports.userLogin = async (req, res) => {
       return res.status(400).json({ message: "Invalid Credential..." });
     }
     return res.json({
-      name: user.name,
-      email: user.email,
+      message : "login successfully...",
+      user
     });
   } catch (err) {
     console.log(err.message);

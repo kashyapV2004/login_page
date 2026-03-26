@@ -4,11 +4,12 @@ dotenv.config();
 const express = require("express");
 const app = express();
 const PORT = 8080;
-
+const cors = require("cors");
 const connectDB = require("./config/db");
 connectDB();
 
 const userRoute = require("./routes/userRoutes");
+app.use(cors());
 
 app.use(express.json());
 
